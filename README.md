@@ -27,4 +27,8 @@ foreach($moves_2_test as $move) {
         echo $e->getMessage();
     }
 }
+
+// Output
+FLERFF: YES
+EEEELLLL: 7
 ```
