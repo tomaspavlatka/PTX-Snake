@@ -5,6 +5,7 @@ Small and simple class to play with old game called Snake. You can initiate a sn
 If everything goes well, system will return -1. If snake aet himself, system will return a number of a step when this happened. 
 
 ##Example
+```
 <?php
 require_once './bootstrap.php';
 use \Ptx\Snake;
@@ -26,3 +27,4 @@ foreach($moves_2_test as $move) {
         echo $e->getMessage();
     }
 }
+```
