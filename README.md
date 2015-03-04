@@ -32,3 +32,14 @@ foreach($moves_2_test as $move) {
 FLERFF: YES
 EEEELLLL: 7
 ```
+
+## Console application
+There is also a console application using the same logic. To start it, call this command
+
+``` 
+php snake.php FLERFF
+```
+
+System will check and will let you know.
+
+##
