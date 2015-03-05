@@ -67,19 +67,19 @@ class Snake
     {
         $snake_head = $this->_get_snake_head();
 
-        if($this->_direction == 'F') {
+        if($this->_going_forward()) {
             $next_step = [
                 ++$snake_head[0], $snake_head[1]
             ];
-        } else if($this->_direction == 'D') {
+        } else if($this->_going_down()) {
             $next_step = [
                 $snake_head[0], --$snake_head[1]
             ];
-        } else if($this->_direction == 'U') {
+        } else if($this->_going_up()) {
             $next_step = [
                 $snake_head[0], ++$snake_head[1]
             ];
-        } else if($this->_direction == 'B') {
+        } else if($this->_going_back()) {
             $next_step = [
                 --$snake_head[0], $snake_head[1]
             ];
@@ -97,19 +97,19 @@ class Snake
     {
         $snake_head = $this->_get_snake_head();
 
-        if($this->_direction == 'F') {
+        if($this->_going_forward()) {
             $next_step = [
                 $snake_head[0], ++$snake_head[1]
             ];
-        } else if($this->_direction == 'D') {
+        } else if($this->_going_down()) {
             $next_step = [
                 ++$snake_head[0], $snake_head[1]
             ];
-        } else if($this->_direction == 'U') {
+        } else if($this->_going_up()) {
             $next_step = [
                 --$snake_head[0], $snake_head[1]
             ];
-        } else if($this->_direction == 'B') {
+        } else if($this->_going_back()) {
             $next_step = [
                 $snake_head[0], --$snake_head[1]
             ];
@@ -127,19 +127,19 @@ class Snake
     {
         $snake_head = $this->_get_snake_head();
 
-        if($this->_direction == 'F') {
+        if($this->_going_forward()) {
             $next_step = [
                 $snake_head[0], --$snake_head[1]
             ];
-        } else if($this->_direction == 'D') {
+        } else if($this->_going_down()) {
             $next_step = [
                 --$snake_head[0], $snake_head[1]
             ];
-        } else if($this->_direction == 'U') {
+        } else if($this->_going_up()) {
             $next_step = [
                 ++$snake_head[0], $snake_head[1]
             ];
-        } else if($this->_direction == 'B') {
+        } else if($this->_going_back()) {
             $next_step = [
                 $snake_head[0], ++$snake_head[1]
             ];
@@ -317,5 +317,37 @@ class Snake
     {
         $key = array_search($step, $this->_positions);
         return is_numeric($key) ? false : true;
+    }
+
+    /**
+     * @return bool
+     */
+    protected function _going_forward()
+    {
+        return $this->_direction == 'F';
+    }
+
+    /**
+     * @return bool
+     */
+    protected function _going_down()
+    {
+        return $this->_direction == 'D';
+    }
+
+    /**
+     * @return bool
+     */
+    protected function _going_up()
+    {
+        return $this->_direction == 'U';
+    }
+
+    /**
+     * @return bool
+     */
+    protected function _going_back()
+    {
+        return $this->_direction == 'B';
     }
 }
